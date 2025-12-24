@@ -1,0 +1,23 @@
+Low Risk Findings
+
+RTA-L-01: User Identity Enumeration
+
+Risk: Low
+
+Impact: Low
+
+Exploitability: High
+
+Description
+
+Mandiant observed that the affected endpoint returned differing responses when an incorrect username was submitted and when a valid username was submitted. The condition allowed Mandiant to enumerate valid usemames, emails, and contact information for DCCU employees and administrative accounts. Systems that provide login functionality often associate a unique identity with each user authorized to access the system. The unique identity usually serves as a component required to be supplied when performing login actions, account recovery actions, and identity proofing actions.
+
+Affected Scope
+
+https://api.elliemae.com (TCP/443)
+
+0 [GET] /encompass/v0.9/users/admin
+
+[parameter] rolemapping=LO
+
+[parameter] siteId=site: 5603027978
