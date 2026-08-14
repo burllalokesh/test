@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+  <appender name="RCE_PROOF" class="ch.qos.logback.core.FileAppender">
+    <file>/tmp/RCE_PROOF_APPSEC.txt</file>
+    <append>true</append>
+    <encoder>
+      <pattern>RCE_CONFIRMED_BY_APPSEC %d{yyyy-MM-dd HH:mm:ss.SSS} user=${user.name} %n</pattern>
+    </encoder>
+  </appender>
+  <root level="DEBUG">
+    <appender-ref ref="RCE_PROOF"/>
+  </root>
+</configuration>
+
